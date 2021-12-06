@@ -75,11 +75,6 @@ def receive():
 
     client.send(">USER".encode('utf-8'))
     nickname=client.recv(BUFFER).decode('utf-8')
-    #   ISSUE(7) solved
-    # if nickname in nicknames:
-    #   while nickname in nicknames:
-    #     client.send("What should we call you: ".encode('utf-8'))
-    #     nickname=client.recv(BUFFER).decode('utf-8')
 
     with open('banned.txt', 'r') as f:
       bans = f.readlines()
